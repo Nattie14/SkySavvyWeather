@@ -17,8 +17,7 @@ function refreshWeather(response) {
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     timeElement.innerHTML = formatDate(date);
     iconElement.innerHTML =  `<img src="${response.data.condition.icon_url}"
-    class="weather-app-icon" 
-    />`
+    class="weather-app-icon"/>`
 }
 
 function capitalizeEveryWord(string) {
@@ -34,7 +33,7 @@ function formatDate(date) {
     let day = days[date.getDay()];
     let month = months[date.getMonth()];
   
-    return `${day}, ${month} ${date.getDate()} ${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    return `${day} ${month} ${date.getDate()}, ${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 }
 
 function searchCity(city) {
