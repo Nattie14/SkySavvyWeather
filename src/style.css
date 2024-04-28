@@ -75,9 +75,9 @@ a {
   display: flex;
 }
 .weather-app-temperature {
-  font-size: 88px;
+  font-size: 74px;
   font-weight: bold;
-  line-height: 88px;
+  line-height: 74px;
 }
 
 .weather-app-icon {
@@ -107,8 +107,8 @@ a {
   opacity: 0.5;
 }
 .weather-forecast-icon {
-  width: 84px;
-  height: 84px;
+  width: 78px;
+  height: 78px;
   margin: 0 auto;
   display: block;
 
