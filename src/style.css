@@ -89,6 +89,15 @@ a {
   font-size: 28px;
 }
 
+.weather-forecast-container{
+    background: radial-gradient(
+        827px at 47.3% 48%,
+        rgb(255, 255, 255) 0%,
+        rgb(28, 106, 164) 88.8%
+      );
+      
+      border-radius: 10px;
+}
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
@@ -105,6 +114,7 @@ a {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+  color: rgb(53, 92, 125);
 }
 .weather-forecast-icon {
   width: 78px;
