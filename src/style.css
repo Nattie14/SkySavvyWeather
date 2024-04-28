@@ -22,7 +22,7 @@ a {
     rgb(255, 255, 255) 0%,
     rgb(138, 192, 216) 90%
   );
-  max-width: 600px;
+  max-width: 700px;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
@@ -33,7 +33,7 @@ a {
   background: rgb(184, 228, 249);
   border: none;
   border-radius: 6px;
-  width: 80%;
+  width: 76%;
   padding: 15px 20px;
   font-size: 16px;
 }
@@ -50,6 +50,7 @@ a {
 .search-form-submit:hover {
   background: rgb(184, 228, 249);
   color: rgb(53, 92, 125);
+  border: 1px solid rgb(53, 92, 125);
 }
 
 .weather-app-data {
@@ -97,6 +98,9 @@ a {
       );
       
       border-radius: 10px;
+      width: 92%;
+      padding: 28px;
+      margin-bottom: 20px;
 }
 .weather-forecast {
   margin-top: 20px;
