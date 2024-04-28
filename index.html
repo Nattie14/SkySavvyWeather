@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Sedan:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <title>Nattie's SkySavvy Weather Application</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-container">
-        <header>
-            <form class="search-form" id="search-form">
-                <input type="search" placeholder="Enter a city" required id="search-form-input" class="search-form-input">
-                <input type="submit" value="Search" class="search-form-submit">
-            </form>
-        </header>
-        <main>
-            <div class="weather-app-data">
-                <div>
-                    <h1 class="weather-app-city" id="city"></h1>
-                    <p class="weather-app-details">
-                        <span id="time"></span>, <span id="description"></span><br>
-                        Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
-                    </p>
-                    
-                    <div class="weather-forecast">
-                        <div class="row">
-                            <div class="col-2">
-                                <div class="weather-forecast-date">Thur</div>
-                                <img src="https://www.freepik.com/icon/cloudy_1163661#fromView=keyword&page=1&position=0&uuid=4a944d4f-68a3-49b3-9f3d-f83dfc31ce5a" alt="" width="42">
-                                <div class="weather-forecast-temperatures">
-                                    <div></div>
-                                    <span class="weather-forecast-temperature-max">18°</span>
-                                    <span class="weather-forecast-temperature-min">12°</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-              
-                </div>
-                <div class="weather-app-temperature-container">
-                    <div id="icon"></div>
-                    <div class="weather-app-temperature" id="temperature"> <strong></strong></div>
-                    <div class="weather-app-unit">°C</div>
-                </div>
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-submit" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-details">
+              <span id="time"></span>, <span id="description"></span><br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="temperature">
+              <strong></strong>
             </div>
-        </main>
-        <footer>
-            <em>This application was created by <a href="https://github.com/Nattie14" target="_blank">Nattie M</a> and is <a href="https://github.com/Nattie14/SkySavvy-App" target="_blank">open sourced Github</a> and <a href="https://skysavvy-app.netlify.app/" target="_blank">hosted on Netlify</a></em>
-        </footer>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+      <footer>
+        <em
+          >This application was created by
+          <a href="https://github.com/Nattie14" target="_blank">Nattie M</a> and
+          is
+          <a href="https://github.com/Nattie14/SkySavvy-App" target="_blank"
+            >open sourced Github</a
+          >
+          and
+          <a href="https://skysavvy-app.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          ></em
+        >
+      </footer>
     </div>
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>

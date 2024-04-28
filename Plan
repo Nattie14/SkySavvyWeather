@@ -3,3 +3,24 @@ Forecast HTML
 Forecast CSS
 Forecast API
 API Intergration (java script)
+function displayForecast() {
+    
+  
+    let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+    let forecastHtml = "";
+  
+    days.forEach(function (day) {
+      forecastHtml =
+        forecastHtml +
+        `
+      <div class="weather-forecast">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">🌦</div>
+      <div class="weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max">18°</span>
+        <span class="weather-forecast-temperature-min">12°</span>
+      </div>
+      </div>
+      
+      `;
+        });
