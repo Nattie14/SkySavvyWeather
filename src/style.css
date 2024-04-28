@@ -106,7 +106,13 @@ a {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+.weather-forecast-icon {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto;
+  display: block;
 
+}
 footer {
   border-top: 1px solid rgb(184, 228, 249);
   padding: 30px 0 0 0;
