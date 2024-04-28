@@ -19,6 +19,8 @@ function refreshWeather(response) {
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"
     class="weather-app-icon"/>`;
+    
+    getForecast(response.data.city);
 }
 
 function capitalizeEveryWord(string) {
@@ -79,19 +81,32 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-function displayForecast() {
+function getForecast(city){
+    let apiKey = "ba4608fb3t14e3e4af50o5a7601d9309";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+axios(apiUrl).then(displayForecast);
+
+
+
+    console.log(apiUrl);
+}
+
+function displayForecast(response) {
+    console.log(response.data);
+
     let forecast = document.querySelector("#forecast");
   
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
   
     days.forEach(function (day) {
-      forecastHtml =
-        forecastHtml +
-        `  <div>
-              <div class="weather-forecast-date">${day}</div>
-              <div class="weather-forecast-icon">🌦</div>
-  <div class="weather-forecast-temperatures">
+    forecastHtml =
+    forecastHtml +
+`  <div>
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon">🌦</div>
+    <div class="weather-forecast-temperatures">
   <span class="weather-forecast-temperature-max">18°</span>
     <span class="weather-forecast-temperature-min">12°</span>
   </div>
@@ -104,8 +119,9 @@ function displayForecast() {
   }
   
   let forecastElement = document.querySelector("#forecast"); 
-  displayForecast(); 
+ 
   searchCity("Nyazura");
+  
 
 
 
